@@ -1,14 +1,23 @@
 //Libraries
 import React from 'react'
-import { View, StatusBar, Text, Image } from 'react-native'
+import { View, StatusBar, Text, Image, StyleSheet, TextInput } from 'react-native'
 //Styles
 import * as Colors from '../styles/colors'
 import { x, y } from '../styles/styles'
 import Button from '../components/Button'
+import HomeButton from '../components/HomeButton'
 
 export default function Search() {
 
-
+    const [text, onChangeText] = React.useState(null);
+    const styles = StyleSheet.create({
+        input: {
+            height: 40,
+            margin: 12,
+            borderWidth: 1,
+            padding: 10,
+        },
+    });
     return (
         <View style={{flex:1}}>   
             <View style={{marginBottom:x(40), marginHorizontal:x(25)}}>
@@ -29,8 +38,13 @@ export default function Search() {
            <View style={{flexDirection:"row",marginHorizontal:x(25)}}>
                
            </View>
+           <TextInput
+                        style={styles.input}
+                        value={text}
+                        placeholder="Buscar..."
+                    />
             <View style={{alignItems:"flex-end", marginHorizontal:x(25)}}>
-                <Button text={"Busca"}/>
+                <HomeButton text={"Buscar"}/>
             </View>  
         </View>
     )

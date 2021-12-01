@@ -8,6 +8,7 @@ import { x, y } from '../styles/styles'
 
 //Components
 import Button from '../components/Button'
+import HomeButton from '../components/HomeButton'
 
 export default function Profile() {
 
@@ -49,7 +50,7 @@ export default function Profile() {
                 </View>  
             </View>
             <View style={{alignItems:"center"}}>
-                <Button text={"Editar"}/>
+                <HomeButton text={"Cerrar Sesión"}/>
             </View>  
         </View>
     )

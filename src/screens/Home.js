@@ -29,6 +29,7 @@ export default function Home() {
                 />
                 <HomeButton text={"Mis Acuerdos"}/>
             </View>
+            
             <View style={{width:x(450), flexDirection:"row"}}>
                 <Image
                     source={require("../../assets/icons/PERSONA.png")}
@@ -37,7 +38,7 @@ export default function Home() {
                 />
                 <View style={{justifyContent:"space-around"}}>
                     <HomeButton text={"Perfil"}/>
-                    <Button text={"Cerrar Sesión"}/>
+                    <HomeButton text={"Cerrar Sesión"}/>
                 </View>
             </View>
         </View>

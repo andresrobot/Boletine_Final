@@ -11,6 +11,8 @@ import Profile from '../screens/Profile';
 import Search from '../screens/Search';
 import Acuerdos from '../screens/Acuerdos';
 import Notifications from '../screens/Notifications';
+import InicioSesion from '../screens/InicioSesion';
+import Resultados from '../screens/Resultados';
 
 
 const Drawer = createDrawerNavigator();
@@ -38,6 +40,8 @@ export default function Navigator() {
         <Drawer.Screen name="Buscar Acuerdos" component={Search} />
         <Drawer.Screen name="Mis Acuerdos" component={Acuerdos} />
         <Drawer.Screen name="Notificaciones" component={Notifications} />
+        <Drawer.Screen name="Inicio de sesión" component={InicioSesion} />
+        <Drawer.Screen name="Resultados" component={Resultados} />
       </Drawer.Navigator>
     </NavigationContainer>
   );

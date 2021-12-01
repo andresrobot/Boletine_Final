@@ -17,7 +17,7 @@ const listAcuerdos = [
         subtitle: 'Boletín 1233 con fecha 30/11/2021 en el juzgado 234'
     }
 ]
-export default function Acuerdos() {
+export default function Resultados() {
 
     const [isChecked, setChecked] = useState(false);
 
@@ -30,9 +30,9 @@ export default function Acuerdos() {
                     style={{ width: x(280), height: y(200), tintColor: "rgba(139,170,173, 0.5)" }}
                 />
                 <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "space-between" }}>
-                    <Text style={{ fontSize: x(69), fontFamily: "Jost", color: Colors.dark_green }}>MIS ACUERDOS</Text>
+                    <Text style={{ fontSize: x(69), fontFamily: "Jost", color: Colors.dark_green }}>BUSCAR</Text>
                     <Image
-                        source={require("../../assets/icons/LIBRO.png")}
+                        source={require("../../assets/icons/LUPA.png")}
                         resizeMode="contain"
                         style={{ width: x(224), height: y(200), opacity: 0.2, position: "absolute", right: 0 }}
                     />
