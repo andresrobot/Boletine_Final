@@ -12,7 +12,7 @@ import Button from '../components/Button'
 
 export default function InicioSesion() {
 
-    const [text, onChangeText, password] = React.useState(null);
+    const [text, onChangeText, password, onChangePassword] = React.useState(null);
     const styles = StyleSheet.create({
         input: {
             height: 40,
@@ -47,6 +47,7 @@ export default function InicioSesion() {
                     <Text style={{ fontSize: x(40), fontFamily: "JostBold", color: Colors.dark_green }}>E-MAIL: </Text>
                     <TextInput
                         style={styles.input}
+                        onChangeText={onChangeText}
                         value={text}
                         placeholder="E-MAIL"
                     />
@@ -56,8 +57,9 @@ export default function InicioSesion() {
                     <Text style={{ fontSize: x(40), fontFamily: "JostBold", color: Colors.dark_green }}>PASSWORD: </Text>
                     <TextInput
                         style={styles.input}
-                        onChangeText={onChangeText}
+                        onChangeText={onChangePassword}
                         value={password}
+  
                         secureTextEntry={true}
                         placeholder="Password"
                     />

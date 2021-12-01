@@ -9,12 +9,7 @@ import { ListItem, Avatar, CheckBox } from 'react-native-elements'
 
 const listAcuerdos = [
     {
-        name: 'Boletín',
-        subtitle: 'Boletín 1234 con fecha 01/12/2021 en el juzgado 123'
-    },
-    {
-        name: 'Boletín',
-        subtitle: 'Boletín 1233 con fecha 30/11/2021 en el juzgado 234'
+        name: 'Boletín'
     }
 ]
 export default function Acuerdos() {
@@ -23,7 +18,7 @@ export default function Acuerdos() {
 
     return (
         <View style={{ flex: 1 }}>
-            <View style={{ marginBottom: x(40), marginHorizontal: x(25) }}>
+            <View style={{ marginBottom: x(100), marginHorizontal: x(25) }}>
                 <Image
                     source={require("../../assets/icons/logo.png")}
                     resizeMode="contain"
@@ -45,16 +40,14 @@ export default function Acuerdos() {
 
                                 <ListItem.Content>
                                     <ListItem.Title>{l.name}</ListItem.Title>
-                                    <ListItem.Subtitle>{l.subtitle}</ListItem.Subtitle>
-                                    <ListItem.CheckBox
-                                        status={isChecked ? true : false}
-                                        onPress={() => {
-                                            setChecked(!isChecked);
-                                        }}
+                                    <CheckBox
+                                        title='Boletín 1234 con fecha 01/12/2021 en el juzgado 123'
+                                        checked={isChecked}
+                                        checkedIcon='dot-circle-o'
+                                        uncheckedIcon='circle-o'
+                                        onPress={() => setChecked(!isChecked)}
+                                        checkedColor={Colors.dark_green}
                                     />
-
-
-
                                 </ListItem.Content>
                             </ListItem>
                         ))

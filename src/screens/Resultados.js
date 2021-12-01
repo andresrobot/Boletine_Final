@@ -46,15 +46,6 @@ export default function Resultados() {
                                 <ListItem.Content>
                                     <ListItem.Title>{l.name}</ListItem.Title>
                                     <ListItem.Subtitle>{l.subtitle}</ListItem.Subtitle>
-                                    <ListItem.CheckBox
-                                        status={isChecked ? true : false}
-                                        onPress={() => {
-                                            setChecked(!isChecked);
-                                        }}
-                                    />
-
-
-
                                 </ListItem.Content>
                             </ListItem>
                         ))
